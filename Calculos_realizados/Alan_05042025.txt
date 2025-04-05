@@ -1,0 +1,5 @@
+Calculo del Impuesto Sobre Renta
+
+Nombre: Alan
+Tipo de Pago: Mensual
+Sueldo: $100,000.00 Pesos Dominicanos (DOP)
