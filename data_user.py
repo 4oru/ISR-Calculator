@@ -21,7 +21,7 @@ def create_table(nombre="", tipo_pago="", salario=""):
     """
     Crea la tabla con los datos proporcionados y la muestra en la terminal.
     """
-    table = Table(title="Información del Usuario")
+    table = Table(title="\nInformación del Usuario")
     
     # Definimos las columnas de la tabla
     table.add_column("Nombre", style="bold green")
@@ -53,7 +53,7 @@ def get_data_user():
         nombre = Prompt.ask("¿Cuál es tu nombre?")
         
         # Pedir el tipo de pago (anual o mensual)
-        tipo_pago = Prompt.ask("¿Es tu sueldo anual o mensual? (a/m)", choices=["a", "m"], default="m")
+        tipo_pago = Prompt.ask("¿Es tu sueldo anual o mensual?", choices=["a", "m"], default="m")
         
         # Pedir el monto del salario
         salario = float(Prompt.ask("¿Cuál es tu monto bruto de salario?", default="0"))
@@ -66,7 +66,7 @@ def get_data_user():
         console.print(f"\n[green]{nombre}[/green], tu salario es [green]${salario:,.2f}[/green] Pesos Dominicanos (DOP) [green]{tipo_pago_str}[/green], ¿es correcto?")
         
         # Preguntar al usuario si la información es correcta
-        confirmacion = Prompt.ask("¿Es correcto? (y/n)", choices=["y", "n"], default="y")
+        confirmacion = Prompt.ask("¿Es correcto?", choices=["y", "n"], default="y")
         
         # Si la respuesta es 'y', salimos del bucle, si es 'n', limpiamos la terminal y repetimos el proceso
         if confirmacion.lower() == 'y':
